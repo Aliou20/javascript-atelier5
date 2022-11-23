@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Utilisateurs</title>
+     <link rel="stylesheet" href="../page css/utilisateur.css">
+</head>
+<body>
+     <div class="conteneur_modal" id="conteneur_modal">
+          
+          <div class="modal" id="modal">
+               <div class="conteneur_close" id="conteneur_close">
+                    <ion-icon name="close-outline"></ion-icon>
+               </div>
+               <div class="conteneur_modal_block">
+                    
+                    <form action="" class="membre_form" id="membre_form">
+                         <h1 id="titre_form">Ajouter un membre</h1>
+                         <div class="rang">
+                              <div class="conteneur_input">
+                                   <label for="nom">Nom</label>
+                                   <input type="text" name="nom" id="nom">
+                              </div>
+                              <div class="conteneur_input">
+                                   <label for="prenom">Prenom</label>
+                                   <input type="text" name="prenom" id="prenom">
+                              </div>
+                         </div>
+                         <div class="rang">
+                              <div class="conteneur_input">
+                                   <label for="date">Date de naissance</label>
+                                   <input type="date" name="date" id="date">
+                              </div>
+                              <div class="conteneur_input">
+                                   <label for="profession">Profession</label>
+                                   <input type="text" name="profession" id="profession">
+                              </div>
+                         </div>
+                         <div class="rang">
+                              <div class="conteneur_input">
+                                   <label for="password">Definir un mot de pass</label>
+                                   <input type="password" name="password" id="password">
+                              </div>
+                              <div class="conteneur_input">
+                                   <label for="confirme_password">Confirmer votre mot de pass</label>
+                                   <input type="password" name="confirme_password" id="confirme_password">
+                              </div>
+                         </div>
+                         <div class="rang">
+                              <div class="conteneur_input">
+                                   <label for="email">E-mail</label>
+                                   <input type="email" name="email" id="email">
+                              </div>
+                              <div class="conteneur_input">
+                                   <label for="telephone">Téléphone</label>
+                                   <input type="tel" name="telephone" id="telephone">
+                              </div>
+                         </div>
+                         <div class="rang">
+                              <div class="conteneur_input">
+                                   <label for="adress">Adresse</label>
+                                   <input type="text" name="adress" id="adress">
+                              </div>
+                              <div class="conteneur_input">
+                                   <label for="organisation">Organisation</label>
+                                   <input type="text" name="organisation" id="organisation">
+                              </div>
+                         </div>
+                         <button type="submit" class="btn_ajouter_membre" id="btn_ajouter_membre">Ajouter</button>
+                         <button type="submit" class="btn_modifier_membre" id="btn_modifier_membre">Modifier</button>
+                    </form>
+               </div>
+          </div>
+     </div>
+    <div class="conteneur">
+     <!-- ============================== Side Bar =============== -->
+     
+     <div class="sideBar">
+          <div class="title_sideBar">
+               <div class="conteneur_icon">
+                    <i class="fa-solid fa-briefcase"></i>
+               </div>
+               <h1 class="title">Bakéli Tontine</h1>
+          </div>
+
+          <div class="navlink_sideBar">
+               <a href="dashbord.html" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <ion-icon name="grid-outline" class="grid-outline"></ion-icon>
+                    </div>
+                    <p class="text_sideBar">Dashboard</p>
+
+               </a>
+               <a href="utilisateur.html" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <i class="fa-regular fa-user"></i>
+                    </div>
+                    <p class="text_sideBar">Utilisateurs</p>
+
+               </a>
+               <a href="" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <p class="text_sideBar">Cotisations</p>
+
+               </a>
+               <a href="" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <p class="text_sideBar">Paramètres</p>
+               </a>
+          </div>
+     </div>
+     <!-- ============================= corp ===================== -->
+     <div class="dashbord">
+          <!-- ================ header ========================== -->
+          <header class="header">
+               <div class="title">Admin Dashboard</div>
+               <div class="conteneur_right">
+                    <div class="conteneur_notification">
+                         <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="conteneur_profil">
+                         <div class="profil">
+                              <img src="../image/profil.jpg" alt="" class="profil_photo">
+                         </div>
+                         <div class="text">
+                              <p class="profil_name" id="profil_name">Aliou Gningue</p>
+                              <p class="profil_statut">Administrateur</p>
+                         </div>
+                    </div>
+                    <div class="conteneur_icon">
+                         <ion-icon name="caret-down-outline" id="caret-down-outline"></ion-icon>
+                         <div class="deconnection" id="deconnection">
+                              <div class="deconnection_icon">
+                                   <ion-icon name="arrow-undo-outline"></ion-icon>
+                              </div>
+                              <div class="deconnection_text">Déconnection</div>
+                         </div>
+                    </div>
+               </div>
+          </header>
+          <!-- ================ main dashbaord =============================================== -->
+          <main class="main">
+               <div class="rang1">
+                    <div class="conteneur_month">
+                         <p class="month">Membres Actifs</p>
+                         <p class="montant">225.000 FCFA</p>
+                         
+                    </div>
+                    <div class="conteneur_month">
+                         <p class="month">Membres Bloqués</p>
+                         <p class="montant">100.000 FCFA</p>
+                    </div>
+                    <div class="conteneur_month">
+                         <p class="month">Total Effictifs</p>
+                         <p class="montant" id="total_membre"></p>
+                    </div>
+               </div>
+               <div class="block_ajouter_membre">
+                    <button class="ajouter" id="ajouter">Ajouter</button>
+               </div>
+
+               <!-- ================================ Tableau membre ==================================== -->
+
+               <table class="table">
+                    <thead>
+                         <tr>
+                              <th>Membres</th>
+                              <th>Date de début</th>
+                              <th>Seuil</th>
+                              <th>Progréssion</th>
+                              <th>Status</th>
+                              <th>Actions</th>
+                         </tr>
+                    </thead>
+                    <tbody id="tbody">
+                         
+                    </tbody>
+               </table>
+               <div class="conteneur_membre">
+                    <div class="header_membre">
+                         
+                    </div>
+               </div>
+          </main>
+     </div>
+    </div>
+    <!--  -->
+    <script src="https://kit.fontawesome.com/c5b85d4e7e.js" crossorigin="anonymous"></script>
+    <!-- +++++++++++++++++++++++ -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <!-- +++++++++++++++++++++ -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <!-- ================================ =========================================================================== -->
+
+     <script type="module">
+         
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+          import { getAuth , signInWithEmailAndPassword ,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+          import {getFirestore , addDoc , collection , getDocs , query ,Timestamp , updateDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+          import {getDatabase , ref , child , get , set , push , onChildAdded } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+          
+          const firebaseConfig = {
+            apiKey: "AIzaSyCvTxrF9KapxjinmFpFr9T07wsglr7l-9U",
+            authDomain: "projet-javascript-46aba.firebaseapp.com",
+            projectId: "projet-javascript-46aba",
+            storageBucket: "projet-javascript-46aba.appspot.com",
+            messagingSenderId: "45084340261",
+            appId: "1:45084340261:web:419c721021c89204774fcc",
+            measurementId: "G-QHG959LNVL"
+          };
+
+          const app = initializeApp(firebaseConfig);
+          const auth = getAuth();
+          const database = getDatabase()
+          const databaseRef = ref(database)
+          const profil_name = document.getElementById("profil_name")
+          const db = getFirestore(app)
+
+          
+
+         
+          
+         
+          
+                   
+          
+
+     </script>
+     <script type="module" src="../page js/utilisateur.js"></script>
+</body>
+</html>

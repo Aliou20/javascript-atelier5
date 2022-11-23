@@ -1,0 +1,312 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+.conteneur {
+     display: flex;
+     width: 100%;
+     font-family: sans-serif;
+}
+/* ======================== Side bar ============================= */
+.sideBar {
+     width: 20%;
+     background-color: #0A3545;
+     height: 100vh;
+     position: fixed;
+     color: white;
+}
+.sideBar .title_sideBar {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 30px 0;
+}
+.sideBar .title_sideBar .fa-solid {
+     font-size: 1.5em;
+     margin-right: 10px;
+}
+
+.sideBar .title_sideBar .title {
+     font-size: 1.3em;
+}
+.sideBar .navlink_sideBar {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* align-items: center; */
+     margin: 40px 0;
+}
+.sideBar .navlink_sideBar .link_sideBar {
+     display: flex;
+     text-decoration: none;
+     color: white;
+     padding: 20px 0;
+     border: #0A3545 1px solid;
+     transition: all ease-in-out 500ms;
+     font-weight: 700;
+}
+.sideBar .navlink_sideBar .link_sideBar:hover {
+     background-color: #1FE07F;
+}
+.sideBar .navlink_sideBar .link_sideBar .grid-outline,
+.sideBar .navlink_sideBar .link_sideBar .fa-user,
+.sideBar .navlink_sideBar .link_sideBar .fa-sack-dollar,
+.sideBar .navlink_sideBar .link_sideBar .fa-gear{
+     font-size: 1.2em;
+     margin: 0 15px;
+}
+/* .sideBar .navlink_sideBar .link_sideBar */
+/* ================== contenu de dashboard ======================= */
+.dashbord {
+     position: absolute;
+     left: 20%;
+     width: 80%;
+     background-color: #eee;
+     height: 100vh;
+}
+/* ===================== header dashboard ========================= */
+.dashbord .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+     background-color: white;
+     box-shadow: 0 0 4px 0;
+     position:fixed ;
+     width: 80%;
+     z-index: 1;
+}
+.header .title {
+     font-size: 1.2em;
+     font-weight: 700;
+     color: #0A3545;
+}
+.header .conteneur_right {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+.header .conteneur_right .fa-bell {
+     margin: 0 20px;
+     font-size: 1.3em;
+}
+.header .conteneur_right .conteneur_profil {
+     display: flex;
+}
+.header .conteneur_right .conteneur_profil .profil {
+     background-color: #1FE07F;
+     width:50px;
+     height: 50px;
+     margin: 5px;
+     border-radius: 50%;
+     box-shadow: 0 0 2px 0;
+}
+.header .conteneur_right .conteneur_profil .profil .profil_photo {
+     width: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+     height: 50px;
+}
+.header .conteneur_right .conteneur_profil .text {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0 15px 0 5px;
+}
+.header .conteneur_right .conteneur_profil .text .profil_name {
+     font-weight: 700;
+     font-size: 1.1em;
+}
+.header .conteneur_right .conteneur_profil .text .profil_statut {
+     color: rgb(12, 12, 12,0.2);
+}
+.header .conteneur_right .conteneur_icon {
+     position: relative;
+     margin-right: 60px;
+}
+.header .conteneur_right .conteneur_icon .deconnection {
+     background-color:white;
+     position:absolute;
+     left: -50px;
+     top: 15px; 
+     padding: 20px 10px;
+     border: 1px solid #0A3545;
+     color: #0A3545;
+     display: none;
+     transition: display ease 300ms;
+     cursor: pointer;
+}
+
+
+
+/* ========================== main dashboard ====================== */
+
+.dashbord .main {
+     /* background-color: #1FE07F; */
+     width: 90%;
+     margin: 0 auto;
+     position: relative;
+     top: 60px;
+}
+.dashbord .main .rang1 {
+     display: flex;
+     margin: 20px 0;
+     justify-content: space-between;
+     align-items: center;
+}
+.dashbord .main .rang1 .conteneur_month {
+     background-color: white;
+     box-shadow: 1px 1px  3px 0px;
+     border-radius: 5px;
+     width: 30%;
+     padding: 20px 
+}
+.dashbord .main .rang1 .conteneur_month .month,
+.dashbord .main .rang1 .conteneur_month .montant{
+     margin-bottom: 15px;
+}
+.dashbord .main .rang1 .conteneur_month .month {
+     font-weight: 700;
+     font-size: 1.1em;
+}
+.dashbord .main .rang1 .conteneur_month .montant {
+     font-weight: bold;
+     color: #0A3545;
+     font-size: 1.5em;
+}
+.dashbord .main .rang1 .conteneur_month .nombre {
+     color: rgb(12, 12, 12,0.5);
+}
+.main .block_ajouter_membre {
+     display: flex;
+     justify-content: flex-end;
+}
+.main .ajouter {
+     padding: 10px 30px;
+     /* float: right; */
+     background-color: #0A3545;
+     border: none;
+     color: white;
+     border-radius: 5px;
+     font-weight: 700;
+     font-size: 1.1em;
+     box-shadow: 1px 1px  3px 0px;
+     margin: 20px 0px 30px;
+     
+}
+/* =============== modal ======================= */
+
+.conteneur_modal {
+     width: 100%;
+     height: 100vh;
+     position: absolute;
+     z-index: 2;
+     background-color: rgb(0, 0, 0,0.3);
+     overflow: hidden;
+     display: none;
+}
+.conteneur_modal .modal {
+     position: absolute;
+     width: 50%;
+     background-color: white;
+     transform: translate(-50% , -50%);
+     top: 50%;
+     left: 50%;
+     /* margin: 10px auto; */
+}
+.conteneur_modal .modal .conteneur_close {
+     float: right;
+     width: 30px;
+     height: 30px;
+     background-color: red;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.4em;
+     color: white;
+     font-weight: bold;
+}
+.conteneur_modal .modal .conteneur_modal_block {
+     width: 70%;
+     margin: 10px auto;
+}
+.membre_form {
+     width: 100%;
+}
+.membre_form h1 {
+     text-align: center;
+     margin: 30px 0 30px;
+     color: #0A3545;
+}
+.membre_form .rang {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+}
+.membre_form .rang .conteneur_input {
+     width: 100%;
+     margin: 10px 0px;
+}
+.membre_form .rang label {
+     display: block;
+     margin-bottom: 5px;
+     font-size: 1.2em;
+     font-weight: 500;
+}
+.membre_form .rang input {
+     width: 90%;
+     padding: 10px 20px;
+     outline: none;
+     transition: all ease 500ms;
+     border: #0A3545 1px solid;
+}
+.membre_form .rang input:focus {
+     background-color: #eee;
+     outline: none;
+     border: rgb(141, 138, 138) 1px solid;
+     transform: scale(1.05);
+}
+.membre_form .btn_ajouter_membre ,
+ .membre_form .btn_modifier_membre  {
+     width: 300px;
+     padding: 15px 0;
+     border: none;
+     border-radius: 10px;
+     display: block;
+     margin: 50px auto;
+     background-color: #1FE07F;
+     color: #0A3545;
+     font-weight: 700;
+     box-shadow: 0px 2px 5px 0px black;
+     
+}
+.membre_form .btn_modifier_membre  {
+     display: none;
+}
+/* ================================== table membre =========================== */
+
+.main .table {
+     width: 100%;
+     border-collapse: collapse;
+     border-radius: 20px 20px 0 0;
+     overflow: hidden;
+}
+.main .table thead {
+     background-color: #1FE07F;
+     height: 50px;
+     box-shadow: 0 5px 1px 1px;
+     
+}
+.main .table thead tr {
+     text-align: center;
+}
+.main .table tbody {
+     background-color: white;
+}
+.main .table tbody tr {
+     height: 50px;
+     text-align: center;
+}

@@ -1,0 +1,120 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+.conteneur {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     overflow-y: hidden;
+}
+/* ================== Coté gauche =================== */
+.conteneur_left {
+     width: 40%;
+     background-color: #0A3545;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 0 15% 10% 0;
+}
+.conteneur_left .conteneur_img {
+     width: 500px;
+     height: 400px;
+}
+.conteneur_left .conteneur_img .img {
+     object-fit: cover;
+     width: 100%;
+}
+
+/* ============== coté droite ========================= */
+.conteneur_right {
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+.signin {
+     width: 100%;
+     transform: translateX(10%);
+}
+.signin h1 {
+     text-align: center;
+     margin: 30px 0 30px;
+     color: #0A3545;
+}
+.signin .rang {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+}
+.signin .rang .conteneur_input {
+     width: 100%;
+     margin: 20px 0px;
+}
+.signin .rang label {
+     display: block;
+     margin-bottom: 5px;
+     font-size: 1.2em;
+     font-weight: 500;
+}
+.signin .rang input {
+     width: 90%;
+     padding: 10px 20px;
+     outline: none;
+     transition: all ease 500ms;
+     border: #0A3545 1px solid;
+}
+.signin .rang input:focus {
+     background-color: #eee;
+     outline: none;
+     border: rgb(141, 138, 138) 1px solid;
+     transform: scale(1.05);
+}
+.signin .inscrire {
+     width: 300px;
+     padding: 15px 0;
+     border: none;
+     border-radius: 10px;
+     display: block;
+     margin: 50px auto;
+     background-color: #1FE07F;
+     color: #0A3545;
+     font-weight: 700;
+     box-shadow: 0px 2px 5px 0px black;
+     
+}
+
+/* ============== Responsive design ================== */
+
+@media only screen and (max-width : 1000px) {
+      .conteneur_right {
+           width: 70%; 
+          /* background-color: aqua; */
+     }
+     .signin {
+          width: 90%;
+           transform: translateX(0%); 
+           /* background-color: red; */
+     }
+     .signin .rang {
+          width: 100%;
+     } 
+}
+@media only screen and (max-width : 900px) {
+     .conteneur {
+          display: block;
+     }
+     .conteneur_left {
+          display: none;
+     }
+     .conteneur_right {
+          width: 100%;
+     }
+}
+
+
+

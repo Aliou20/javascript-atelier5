@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Admin dashbord</title>
+     <link rel="stylesheet" href="../page css/dashbord.css">
+</head>
+<body>
+    <div class="conteneur">
+     <!-- ============================== Side Bar =============== -->
+     
+     <div class="sideBar">
+          <div class="title_sideBar">
+               <div class="conteneur_icon">
+                    <i class="fa-solid fa-briefcase"></i>
+               </div>
+               <h1 class="title">Bakéli Tontine</h1>
+          </div>
+
+          <div class="navlink_sideBar">
+               <a href="dashbord.html" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <ion-icon name="grid-outline" class="grid-outline"></ion-icon>
+                    </div>
+                    <p class="text_sideBar">Dashboard</p>
+
+               </a>
+               <a href="utilisateur.html" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <i class="fa-regular fa-user"></i>
+                    </div>
+                    <p class="text_sideBar">Utilisateurs</p>
+
+               </a>
+               <a href="" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <p class="text_sideBar">Cotisations</p>
+
+               </a>
+               <a href="" class="link_sideBar">
+                    <div class="conteneur_icon">
+                         <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <p class="text_sideBar">Paramètres</p>
+               </a>
+          </div>
+     </div>
+     <!-- ============================= corp ===================== -->
+     <div class="dashbord">
+          <!-- ================ header ========================== -->
+          <header class="header">
+               <div class="title">Admin Dashboard</div>
+               <div class="conteneur_right">
+                    <div class="conteneur_notification">
+                         <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="conteneur_profil">
+                         <div class="profil">
+                              <img src="../image/profil.jpg" alt="" class="profil_photo">
+                         </div>
+                         <div class="text">
+                              <p class="profil_name" id="profil_name">Aliou Gningue</p>
+                              <p class="profil_statut">Administrateur</p>
+                         </div>
+                    </div>
+                    <div class="conteneur_icon">
+                         <ion-icon name="caret-down-outline" id="caret-down-outline"></ion-icon>
+                         <div class="deconnection" id="deconnection">
+                              <div class="deconnection_icon">
+                                   <ion-icon name="arrow-undo-outline"></ion-icon>
+                              </div>
+                              <div class="deconnection_text">Déconnection</div>
+                         </div>
+                    </div>
+               </div>
+          </header>
+          <!-- ================ main dashbaord -->
+          <main class="main">
+               <div class="rang1">
+                    <div class="conteneur_month">
+                         <p class="month">Juin</p>
+                         <p class="montant">225.000 FCFA</p>
+                         <p class="nombre">Nombre de cotisation : 27</p>
+                    </div>
+                    <div class="conteneur_month">
+                         <p class="month">Mai</p>
+                         <p class="montant">100.000 FCFA</p>
+                         <p class="nombre">Nombre de cotisation : 23</p>
+                    </div>
+                    <div class="conteneur_month">
+                         <div class="conteneur_icon">
+                              <i class="fa-solid fa-sack-dollar"></i>
+                         </div>
+                         <div class="conteneur_text">
+                              <p>Caisse</p>
+                              <p class="somme">3.500.000/5.000.000 FCFA</p>
+
+                         </div>
+                    </div>
+               </div>
+          </main>
+     </div>
+    </div>
+    <!--  -->
+    <script src="https://kit.fontawesome.com/c5b85d4e7e.js" crossorigin="anonymous"></script>
+    <!-- +++++++++++++++++++++++ -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <!-- +++++++++++++++++++++ -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <!-- ================================ =========================================================================== -->
+
+     <script type="module">
+         
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+          import { getAuth , signInWithEmailAndPassword ,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+          import {getDatabase , ref , child , get , set } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+          
+          const firebaseConfig = {
+            apiKey: "AIzaSyCvTxrF9KapxjinmFpFr9T07wsglr7l-9U",
+            authDomain: "projet-javascript-46aba.firebaseapp.com",
+            projectId: "projet-javascript-46aba",
+            storageBucket: "projet-javascript-46aba.appspot.com",
+            messagingSenderId: "45084340261",
+            appId: "1:45084340261:web:419c721021c89204774fcc",
+            measurementId: "G-QHG959LNVL"
+          };
+
+          const app = initializeApp(firebaseConfig);
+          const auth = getAuth();
+          const database = getDatabase()
+          const databaseRef = ref(database)
+          const profil_name = document.getElementById("profil_name")
+          
+
+          auth.onAuthStateChanged(user => {
+              
+               get(child(databaseRef,'users/' + user.uid))
+               .then(snapshot => {
+                    if(snapshot.exists()) {
+                         const data = snapshot.val()
+                         profil_name.innerHTML = `${data.prenom} ${data.nom}`
+                    }
+               })
+          })
+
+          // ================================================= Deconnection btn =====================================================
+
+          const deconnection = document.getElementById("deconnection")
+          const icon_deconnect = document.getElementById("caret-down-outline")
+          icon_deconnect.addEventListener('click', () => {
+               
+               deconnection.style.display  = "flex"
+          })
+
+          
+          deconnection.addEventListener("click", () => {
+               auth.signOut()
+               .then(() => {
+                    alert("User is disconnect")
+                    location.href = "connexion.html"
+               })
+               .catch(error => {
+                    alert("User is not disconnect")
+               })
+          })
+          
+     </script>
+</body>
+</html>

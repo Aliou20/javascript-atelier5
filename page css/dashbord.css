@@ -1,0 +1,184 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+.conteneur {
+     display: flex;
+     width: 100%;
+     font-family: sans-serif;
+}
+/* ======================== Side bar ============================= */
+.sideBar {
+     width: 20%;
+     background-color: #0A3545;
+     height: 100vh;
+     position: fixed;
+     color: white;
+}
+.sideBar .title_sideBar {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 30px 0;
+}
+.sideBar .title_sideBar .fa-solid {
+     font-size: 1.5em;
+     margin-right: 10px;
+}
+
+.sideBar .title_sideBar .title {
+     font-size: 1.3em;
+}
+.sideBar .navlink_sideBar {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* align-items: center; */
+     margin: 40px 0;
+}
+.sideBar .navlink_sideBar .link_sideBar {
+     display: flex;
+     text-decoration: none;
+     color: white;
+     padding: 20px 0;
+     border: #0A3545 1px solid;
+     transition: all ease-in-out 500ms;
+     font-weight: 700;
+}
+.sideBar .navlink_sideBar .link_sideBar:hover {
+     background-color: #1FE07F;
+}
+.sideBar .navlink_sideBar .link_sideBar .grid-outline,
+.sideBar .navlink_sideBar .link_sideBar .fa-user,
+.sideBar .navlink_sideBar .link_sideBar .fa-sack-dollar,
+.sideBar .navlink_sideBar .link_sideBar .fa-gear{
+     font-size: 1.2em;
+     margin: 0 15px;
+}
+/* .sideBar .navlink_sideBar .link_sideBar */
+/* ================== contenu de dashboard ======================= */
+.dashbord {
+     position: absolute;
+     left: 20%;
+     width: 80%;
+     background-color: #eee;
+     height: 100vh;
+}
+/* ===================== header dashboard ========================= */
+.dashbord .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+     background-color: white;
+     box-shadow: 0 0 4px 0;
+     position:fixed ;
+     width: 80%;
+     z-index: 1;
+}
+.header .title {
+     font-size: 1.2em;
+     font-weight: 700;
+     color: #0A3545;
+}
+.header .conteneur_right {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+.header .conteneur_right .fa-bell {
+     margin: 0 20px;
+     font-size: 1.3em;
+}
+.header .conteneur_right .conteneur_profil {
+     display: flex;
+}
+.header .conteneur_right .conteneur_profil .profil {
+     background-color: #1FE07F;
+     width:50px;
+     height: 50px;
+     margin: 5px;
+     border-radius: 50%;
+     box-shadow: 0 0 2px 0;
+}
+.header .conteneur_right .conteneur_profil .profil .profil_photo {
+     width: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+     height: 50px;
+}
+.header .conteneur_right .conteneur_profil .text {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0 15px 0 5px;
+}
+.header .conteneur_right .conteneur_profil .text .profil_name {
+     font-weight: 700;
+     font-size: 1.1em;
+}
+.header .conteneur_right .conteneur_profil .text .profil_statut {
+     color: rgb(12, 12, 12,0.2);
+}
+.header .conteneur_right .conteneur_icon {
+     position: relative;
+     margin-right: 60px;
+}
+.header .conteneur_right .conteneur_icon .deconnection {
+     background-color:white;
+     position:absolute;
+     left: -50px;
+     top: 15px; 
+     padding: 20px 10px;
+     border: 1px solid #0A3545;
+     color: #0A3545;
+     display: none;
+     transition: display ease 300ms;
+     cursor: pointer;
+}
+
+
+
+/* ========================== main dashboard ====================== */
+
+.dashbord .main {
+     /* background-color: #1FE07F; */
+     width: 90%;
+     margin: 0 auto;
+     position: relative;
+     top: 60px;
+}
+.dashbord .main .rang1 {
+     display: flex;
+     margin: 20px 0;
+     justify-content: space-between;
+     align-items: center;
+}
+.dashbord .main .rang1 .conteneur_month {
+     background-color: white;
+     box-shadow: 1px 1px  3px 0px;
+     border-radius: 5px;
+     width: 30%;
+     padding: 20px 
+}
+.dashbord .main .rang1 .conteneur_month .month,
+.dashbord .main .rang1 .conteneur_month .montant{
+     margin-bottom: 15px;
+}
+.dashbord .main .rang1 .conteneur_month .month {
+     font-weight: 700;
+     font-size: 1.1em;
+}
+.dashbord .main .rang1 .conteneur_month .montant {
+     font-weight: bold;
+     color: #0A3545;
+     font-size: 1.5em;
+}
+.dashbord .main .rang1 .conteneur_month .nombre {
+     color: rgb(12, 12, 12,0.5);
+}
+
+
+
